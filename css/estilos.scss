@@ -1,0 +1,580 @@
+//--------------------------
+//PATRON DE COLORES
+//--------------------------
+$texto: #111111;
+$principal: #4D59A8;
+$secundario: #A1A9DD;
+$yellow: #F5E25D;
+$header: #DBDDD9;
+$header_first: #363D46;
+$header_second: #3E4650;
+$header_third: #535559;
+$encabezado: rgba(19, 32, 115, 0.4);
+//Fuente Base para medidas relativas
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $texto;
+}
+
+.bienvenidos {
+    background: url("../images/fondo-encabezado.jpg") no-repeat center top;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado {
+    background: $header_third;
+    color: #FFF;
+    padding: 0.5rem 0;
+    transition: all 0.5s ease;
+}
+
+.fondo-menu {
+   background: rgba(7, 10, 33, 0.75);;
+}
+
+.encabezado .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.encabezado .logo img {
+    width: 150px;
+    height: auto;
+}
+
+//----------------------
+//BOTON BUSCAR Y BOTON MENU
+//----------------------
+.boton-buscar,
+.boton-menu {
+    border: 0;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 0.5rem;
+    background: transparent;
+    color: $principal;
+}
+
+.boton-buscar:focus,
+.boton-menu:focus {
+    outline: 0;
+}
+
+.boton-buscar {
+    margin-left: auto;
+    margin-right: 0.8rem;
+}
+
+//---------------------
+//BLOQUE BUSCAR
+//---------------------
+#bloque-buscar {
+    flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar {
+    display: flex;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"] {
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 1rem;
+    flex: 1 1 auto;
+}
+
+.contenedor-bloque-buscar input[type="submit"] {
+    flex: 0 1 auto;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    background: $principal;
+    color: #DBDDD9;
+    padding: 0 1rem;
+}
+
+#menu-principal {
+    flex: 1 1 100%;
+}
+
+#menu-principal ul {
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0 0;
+}
+
+#menu-principal ul a {
+    display: block;
+    padding: 0.8rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 1px solid #4D59A8;
+    text-decoration: none;
+    color: #fff;
+}
+
+#menu-principal ul a:hover,
+#menu-principal ul li.active a {
+    color: $principal;
+}
+
+.texto-encabezado {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+// BUG COLLAPSE
+@media (max-width: 575px) {
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.texto-encabezado .display-4 {
+    margin-top: 4rem;
+}
+
+.texto-encabezado .btn-primary {
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $principal;
+    border-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.active {
+    color: #fff;
+    background-color: #F8982C;
+    border-color: transparent;
+}
+
+//---------------------
+//FLECHA BAJAR
+//----------------------
+.flecha-bajar a {
+    display: inline-block;
+    color: #fff;
+    font-size: 4rem;
+    animation: flecha-animada 2s ease-in-out infinite;
+}
+
+//ANIMACION FLECHA
+@keyframes flecha-animada {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/*-----------------
+//SECTION AGENCIA
+------------------*/
+
+.agencia {
+    background: $principal;
+    color: #fff;
+}
+
+.agencia img {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*--------------------------
+SECTION TU MEJOR ELECCION
+----------------------------*/
+
+.tu-mejor-eleccion h2 span {
+    color: $principal;
+}
+
+.tu-mejor-eleccion ul,
+.tu-mejor-eleccion ul li {
+    list-style: none;
+}
+
+.tu-mejor-eleccion ul li .fa {
+    font-size: 2.3rem;
+    background: $principal;
+    border-radius: 50%;
+    width: 4.7rem;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    color: #fff;
+}
+
+.tu-mejor-eleccion ul li .contenedor-eleccion h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.8rem;
+}
+
+.tu-mejor-eleccion ul li {
+    min-height: 9rem;
+}
+
+
+/*--------------------------
+SECTION SERVICIOS
+----------------------------*/
+
+.servicios {
+    background: url("../images/fondo-servicios-mobile_03.jpg") no-repeat center center;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+
+.servicios article {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.servicios img {
+    flex: 0 0 60px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.servicios h3 {
+    margin: 0;
+    font-size: 1rem;
+    flex: 1 1 auto;
+}
+
+.servicios h3 a {
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+//PSEUDOELEMENTO AFTER
+.servicios h3 a::after {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 2rem;
+    margin-left: 1rem;
+    opacity: 0.5;
+    position: relative;
+    left: 0;
+    transition: all .05s ease;
+}
+
+.servicios h3 a:hover::after {
+    left: -0.5rem;
+    opacity: 1;
+    color: $secundario;
+}
+
+.servicios article .fa {
+    font-size: 2.8rem;
+    background: #3898C3;
+    border-radius: 50%;
+    width: 4.7rem;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    color: #fff;
+    margin-right: 0.8rem;
+}
+
+i.fa.fa-mobile {
+    font-size: 3.7rem;
+}
+
+
+/*--------------------------------
+SECTION PIE DE PAGINA
+--------------------------------*/
+
+.piedepagina {
+    background: $texto;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.piedepagina .redes-sociales {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.piedepagina .redes-sociales a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    opacity: 0.7;
+}
+
+.piedepagina .redes-sociales a:hover {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.ir-arriba {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: $principal;
+    text-decoration: none;
+    z-index: 99999;
+    line-height: 0;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.ir-arriba:hover,
+.ir-arriba:focus {
+    outline: 0;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*--------------------------------
+ESTILOS PAGINA NOSOTROS
+--------------------------------*/
+
+.paginas-internas .bienvenidos {
+    height: 50vh;
+}
+
+.paginas-internas .ruta {
+    background: $principal;
+    color: #fff;
+}
+
+.paginas-internas .ruta a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.paginas-internas .ruta a:hover {
+    text-decoration: none;
+}
+
+.paginas-internas div.card-header {
+    background: #3898C3;
+}
+
+.paginas-internas div.card-header a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.paginas-internas div.card-header a:hover {
+    color: $secundario;
+}
+
+
+/*--------------------------------
+ESTILOS PAGINA SERVICIOS
+--------------------------------*/
+
+.paginas-internas .lista-servicios {
+    background: $secundario;
+}
+
+.paginas-internas .lista-servicios .item-servicios {
+    background: #fff;
+    text-align: center;
+    border: 5px solid $principal;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.paginas-internas .lista-servicios .item-servicios .fa {
+    font-size: 6rem;
+    color: $principal;
+    margin-bottom: 1rem;
+    transition: all 1s ease;
+}
+
+.paginas-internas .lista-servicios .item-servicios:hover .fa {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+
+/*--------------------------
+MEDIAS QUERIES
+----------------------------*/
+
+@media (min-width:768px) {
+    #menu-principal {
+        height: auto !important;
+        display: block;
+        flex: 0 1 auto;
+        margin-left: auto;
+        order: 1;
+    }
+    #menu-principal ul {
+        display: flex;
+        margin: 0 0 0 0;
+    }
+    #menu-principal ul li a {
+        padding: 0.8rem;
+        text-transform: capitalize;
+        margin: 0 0.3rem;
+        border-top: 0;
+        border-bottom: 4px solid transparent;
+        transition: all 0.5s ease;
+    }
+    #menu-principal ul li.active a,
+    #menu-principal ul li a:hover {
+        color: $principal;
+        border-bottom: 4px solid;
+    }
+    .boton-buscar {
+        margin-left: 1rem;
+        margin-right: 0rem;
+        order: 2;
+    }
+    #bloque-buscar {
+        order: 3;
+        position: absolute;
+        width: 20rem;
+        right: 3rem;
+        top: 2.8rem;
+        transition: all 0.5s ease;
+    }
+    //Seccion Servicios 
+    .servicios article {
+        margin: 1rem 0;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .servicios article .fa {
+        font-size: 4rem;
+        width: 7rem;
+        height: 7rem;
+        line-height: 7rem;
+        margin-right: 0rem;
+        margin-bottom: 1rem;
+        transition: all 1s ease;
+    }
+    .servicios article:hover .fa {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+    i.fa.fa-mobile {
+        font-size: 6rem;
+    }
+    .servicios h3 a::after {
+        display: none;
+    }
+    .servicios h3 a {
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+        width: 100%;
+        display: block;
+    }
+    .servicios p {
+        width: 100%;
+    }
+    .servicios h3 {
+        flex: 0 1 auto;
+    }
+    .servicios .btn-secondary {
+        margin-top: auto;
+    }
+    //Agencia
+    #image-agencia {
+        display: flex;
+    }
+    /*--------------------------
+PAGINA SERVICIOS
+----------------------------*/
+    .paginas-internas .lista-servicios .col-md-4 {
+        display: flex;
+    }
+    .paginas-internas .lista-servicios .item-servicios {
+        display: flex;
+        flex-direction: column;
+    }
+    .paginas-internas .lista-servicios .item-servicios .btn-primary {
+        margin-top: auto;
+    }
+}
+
+@media (min-width:992px) {
+    html {
+        font-size: 16px;
+    }
+    .bienvenidos {
+        background: url("../images/encabezado-desktop.jpg") no-repeat center top;
+        background-size: cover;
+    }
+    .servicios {
+        background: url("../images/servicios-desktop.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    .tu-mejor-eleccion ul li {
+        display: flex;
+        min-height: 8rem;
+    }
+    .tu-mejor-eleccion ul li .fa {
+        text-align: center;
+        flex: 0 1 auto;
+        margin-right: 1rem;
+        transition: all 1s ease;
+    }
+    .tu-mejor-eleccion ul li:hover .fa {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+        background: #3898C3;
+    }
+    .contenedor-eleccion {
+        flex: 1 0 0px;
+    }
+    .tu-mejor-eleccion ul li .contenedor-eleccion h4 {
+        margin-top: 0;
+        font-size: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .tu-mejor-eleccion ul:first-child .fa {
+        order: 1;
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+    .tu-mejor-eleccion ul li p {
+        font-size: 0.9rem;
+    }
+}
